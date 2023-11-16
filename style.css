@@ -85,6 +85,12 @@
     display: block;
 }
 
+.mobile-nav{
+    display: none;
+}
+
+
+
 
 
 
@@ -224,6 +230,7 @@ h1 {
     .navigation {
         float: none;
         text-align: center;
+        display: none;
     }
 
     .logo {
@@ -252,6 +259,83 @@ h1 {
     /* .row{
         float: none;
     } */
+
+    .hamburger{
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        
+        display: block;
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+
+        appearance: none;
+        background: none;
+        outline: none;
+        border: none;
+    }
+
+    .hamburger .bar, .hamburger:after, .hamburger:before{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color:#000000;
+        margin: 4px 0px;
+        transition: 0.4s;
+
+    }
+
+    .hamburger.is-active::before{
+        transform: rotate(-45deg) translate(-8px, 6px);
+    }
+
+    .hamburger.is-active::after{
+        transform: rotate(45deg) translate(-9px, 8px);
+    }
+
+    .hamburger.is-active.bar{
+        opacity: 0;
+    }
+    
+
+
+    .mobile-nav{
+        position:fixed;
+        top: 0;
+        left: 100%;
+        width: 100%;
+        min-height: 100vh;
+        display: block;
+        z-index: 98;
+        background-color: #12002F;
+        padding-top: 120px;
+        transition: 0.4s;
+
+    }
+
+
+    .mobile-nav.is-active{
+        left: 0;
+    }
+
+    .mobile-nav a{
+        display: block;
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto 16px;
+        text-align: center;
+        padding: 12px 16px;
+        background-color: #1f103f;
+    }
+
+
+
+
+
+
+
 
 
     }
